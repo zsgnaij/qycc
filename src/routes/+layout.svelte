@@ -1,6 +1,8 @@
 <script lang="ts">
 	import '../app.css';
 	import { base } from '$app/paths';
+	
+	export const prerender = true;
 
 	let { children } = $props();
 </script>

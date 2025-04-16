@@ -18,7 +18,6 @@ const config = {
 			precompress: false,
 			strict: true
 		}),
-		trailingSlash: 'always', 
 		paths: {
 			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 		},
