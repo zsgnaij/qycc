@@ -2,7 +2,6 @@
 	import '../app.css';
 	import { base } from '$app/paths';
 
-	export const ssr = false;
 	let { children } = $props();
 </script>
 
