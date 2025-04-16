@@ -2,9 +2,6 @@
 	import '../app.css';
 	import { base } from '$app/paths';
 
-	export const prerender = true;
-	export const trailingSlash = 'always';
-
 	let { children } = $props();
 </script>
 <nav>
