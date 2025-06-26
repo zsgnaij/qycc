@@ -1,3 +1,21 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+:root {
+  --bg-color: #f8fafc;
+  --text-color: #1e293b;
+  --primary: #6366f1;
+}
+
+.dark {
+  --bg-color: #1e293b;
+  --text-color: #f8fafc;
+  --primary: #818cf8;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
