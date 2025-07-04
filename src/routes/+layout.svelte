@@ -41,7 +41,7 @@
 	const navItems = [
 		{ name: '首页', path: base ? base + '/' : '/' },
 		{ name: '关于', path: base ? base + '/about' : '/about' },
-		{ name: '压缩器', path: base ? base + '/compressor' : '/compressor' }
+		{ name: '图片压缩', path: base ? base + '/compressor' : '/compressor' }
 	];
 
 	// 移动端菜单状态
