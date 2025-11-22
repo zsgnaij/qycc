@@ -4,7 +4,7 @@
 
 	// 页面加载后立即跳转到compressor页面
 	onMount(() => {
-		goto('/compressor');
+		goto('/qycc/compressor');
 	});
 </script>
 
