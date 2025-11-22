@@ -30,19 +30,8 @@
 
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { fly } from 'svelte/transition';
 
 	export let children: any;
-
-	// 当前活动链接状态
-	let activeLink = base ? base + '/' : '/';
-
-	// 导航项配置
-	const navItems = [
-		{ name: '首页', path: base ? base + '/' : '/' },
-		{ name: '关于', path: base ? base + '/about' : '/about' },
-		{ name: '图片压缩', path: base ? base + '/compressor' : '/compressor' }
-	];
 
 	// 移动端菜单状态
 	let mobileMenuOpen = false;
@@ -101,26 +90,6 @@
 			{/if}
 		</button>
 	</div>
-
-	<!-- 导航链接区域 -->
-	<div class={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
-		{#each navItems as item}
-			<a
-				href={item.path}
-				class:active={activeLink === item.path}
-				on:click={() => {
-					activeLink = item.path;
-					mobileMenuOpen = false;
-				}}
-				in:fly={{ y: 20, duration: 300 }}
-				out:fly={{ y: -20, duration: 300 }}
-			>
-				{item.name}
-				<span class="link-indicator" />
-			</a>
-		{/each}
-	</div>
-
 	<!-- 主题切换按钮 -->
 	<div class="theme-switch"></div>
 </nav>
